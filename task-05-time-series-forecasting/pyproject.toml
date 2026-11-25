@@ -1,0 +1,21 @@
+[project]
+name = "demand-forecasting"
+version = "1.0.0"
+description = "RabTech Academy DS internship, Task 5: decomposition, ADF, SARIMA/SARIMAX and Prophet forecasting"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "numpy>=2.1",
+    "pandas>=2.2",
+    "scipy>=1.14",
+    "statsmodels>=0.14.4",
+    "prophet>=1.1.6",
+    "matplotlib>=3.9",
+    "seaborn>=0.13.2",
+    "jupyterlab>=4.2",
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+package = false
