@@ -1,0 +1,733 @@
+{
+  "data": {
+    "n_customers": 7043,
+    "n_raw_columns": 21,
+    "n_features_model": 22,
+    "churn_rate": 0.2653698707936959,
+    "n_churned": 1869,
+    "blank_total_charges_fixed": 11,
+    "monthly_revenue_total": 456116.6,
+    "monthly_revenue_churned": 139130.85
+  },
+  "drivers": [
+    {
+      "feature": "tenure",
+      "type": "numeric",
+      "test": "Mann-Whitney U",
+      "statistic": 2515538.0,
+      "p": 2.419635517951866e-208,
+      "effect": -0.4797343510572577,
+      "effect_name": "rank-biserial r",
+      "detail": "median churned 10.0 vs stayed 38.0",
+      "p_holm": 5.0812345876989185e-207,
+      "significant": true
+    },
+    {
+      "feature": "Contract",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 1184.5965720837926,
+      "p": 5.863038300673391e-258,
+      "effect": 0.4101156965761409,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Month-to-month (43%); lowest: Two year (3%)",
+      "p_holm": 1.289868426148146e-256,
+      "significant": true
+    },
+    {
+      "feature": "OnlineSecurity",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 849.9989679615965,
+      "p": 2.661149635176552e-185,
+      "effect": 0.3474004326740552,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (42%); lowest: No internet service (7%)",
+      "p_holm": 5.322299270353104e-184,
+      "significant": true
+    },
+    {
+      "feature": "TechSupport",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 828.1970684587394,
+      "p": 1.4430840279998987e-180,
+      "effect": 0.3429161982469257,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (42%); lowest: No internet service (7%)",
+      "p_holm": 2.7418596531998075e-179,
+      "significant": true
+    },
+    {
+      "feature": "InternetService",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 732.309589667794,
+      "p": 9.571788222840544e-160,
+      "effect": 0.32245455521230887,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Fiber optic (42%); lowest: No (7%)",
+      "p_holm": 1.722921880111298e-158,
+      "significant": true
+    },
+    {
+      "feature": "PaymentMethod",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 648.1423274814,
+      "p": 3.6823546520097993e-140,
+      "effect": 0.30335862555407056,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Electronic check (45%); lowest: Credit card (automatic) (15%)",
+      "p_holm": 6.260002908416659e-139,
+      "significant": true
+    },
+    {
+      "feature": "TotalCharges",
+      "type": "numeric",
+      "test": "Mann-Whitney U",
+      "statistic": 3381224.0,
+      "p": 5.685033866207314e-83,
+      "effect": -0.3006924568101238,
+      "effect_name": "rank-biserial r",
+      "detail": "median churned 703.5 vs stayed 1679.5",
+      "p_holm": 7.959047412690239e-82,
+      "significant": true
+    },
+    {
+      "feature": "OnlineBackup",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 601.812790113409,
+      "p": 2.0797592160864276e-131,
+      "effect": 0.2923155121954445,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (40%); lowest: No internet service (7%)",
+      "p_holm": 3.327614745738284e-130,
+      "significant": true
+    },
+    {
+      "feature": "DeviceProtection",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 558.419369407389,
+      "p": 5.505219496457244e-122,
+      "effect": 0.281579732968073,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (39%); lowest: No internet service (7%)",
+      "p_holm": 8.257829244685866e-121,
+      "significant": true
+    },
+    {
+      "feature": "MonthlyCharges",
+      "type": "numeric",
+      "test": "Mann-Whitney U",
+      "statistic": 6003125.5,
+      "p": 3.311627651988585e-54,
+      "effect": 0.24157137914125104,
+      "effect_name": "rank-biserial r",
+      "detail": "median churned 79.7 vs stayed 64.4",
+      "p_holm": 2.980464886789726e-53,
+      "significant": true
+    },
+    {
+      "feature": "StreamingMovies",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 375.6614793452656,
+      "p": 2.667756755723681e-82,
+      "effect": 0.23095080906926801,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (34%); lowest: No internet service (7%)",
+      "p_holm": 3.468083782440785e-81,
+      "significant": true
+    },
+    {
+      "feature": "StreamingTV",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 374.2039433109813,
+      "p": 5.528994485739183e-82,
+      "effect": 0.2305023384466809,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (34%); lowest: No internet service (7%)",
+      "p_holm": 6.63479338288702e-81,
+      "significant": true
+    },
+    {
+      "feature": "auto_pay",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 309.3485572016955,
+      "p": 3.027872572285947e-69,
+      "effect": 0.2099020635913274,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (35%); lowest: Yes (16%)",
+      "p_holm": 3.3306598295145413e-68,
+      "significant": true
+    },
+    {
+      "feature": "PaperlessBilling",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 258.27764906707307,
+      "p": 4.073354668665985e-58,
+      "effect": 0.1918253316664679,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Yes (34%); lowest: No (16%)",
+      "p_holm": 4.073354668665985e-57,
+      "significant": true
+    },
+    {
+      "feature": "Dependents",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 189.12924940423474,
+      "p": 4.9249216612154196e-43,
+      "effect": 0.16422140157972526,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (31%); lowest: Yes (15%)",
+      "p_holm": 3.9399373289723357e-42,
+      "significant": true
+    },
+    {
+      "feature": "SeniorCitizen",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 159.42630036838742,
+      "p": 1.510066805092378e-36,
+      "effect": 0.1508893281764731,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Yes (42%); lowest: No (24%)",
+      "p_holm": 1.0570467635646646e-35,
+      "significant": true
+    },
+    {
+      "feature": "Partner",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 158.7333820309922,
+      "p": 2.1399113440759935e-36,
+      "effect": 0.15044754495917653,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: No (33%); lowest: Yes (20%)",
+      "p_holm": 1.2839468064455961e-35,
+      "significant": true
+    },
+    {
+      "feature": "n_addon_services",
+      "type": "numeric",
+      "test": "Mann-Whitney U",
+      "statistic": 4463946.5,
+      "p": 4.735235340536365e-07,
+      "effect": -0.07676289419274007,
+      "effect_name": "rank-biserial r",
+      "detail": "median churned 2.0 vs stayed 2.0",
+      "p_holm": 2.3676176702681824e-06,
+      "significant": true
+    },
+    {
+      "feature": "MultipleLines",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 11.33044148319756,
+      "p": 0.0034643829548773003,
+      "effect": 0.04010925283378871,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Yes (29%); lowest: No phone service (25%)",
+      "p_holm": 0.013857531819509201,
+      "significant": true
+    },
+    {
+      "feature": "PhoneService",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 0.9150329892546948,
+      "p": 0.3387825358066928,
+      "effect": 0.011941980029003072,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Yes (27%); lowest: No (25%)",
+      "p_holm": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "charge_ratio",
+      "type": "numeric",
+      "test": "Mann-Whitney U",
+      "statistic": 4779794.5,
+      "p": 0.46273571806685365,
+      "effect": -0.011438949697659018,
+      "effect_name": "rank-biserial r",
+      "detail": "median churned 1.0 vs stayed 1.0",
+      "p_holm": 1.0,
+      "significant": false
+    },
+    {
+      "feature": "gender",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 0.4840828822091383,
+      "p": 0.48657873605618596,
+      "effect": 0.008612095078997826,
+      "effect_name": "Cram\u00e9r's V",
+      "detail": "highest churn: Female (27%); lowest: Male (26%)",
+      "p_holm": 1.0,
+      "significant": false
+    }
+  ],
+  "split": {
+    "n_train": 5634,
+    "n_test": 1409,
+    "churn_rate_train": 0.2653532126375577,
+    "churn_rate_test": 0.2654364797728886
+  },
+  "tuning": {
+    "Dummy (majority)": {
+      "best_params": {},
+      "cv_roc_auc_mean": 0.5,
+      "cv_roc_auc_sd": 0.0
+    },
+    "Logistic Regression": {
+      "best_params": {
+        "C": 14.528246637516036
+      },
+      "cv_roc_auc_mean": 0.8457822292718735,
+      "cv_roc_auc_sd": 0.012473013794874253
+    },
+    "Random Forest": {
+      "best_params": {
+        "max_depth": 15,
+        "max_features": 0.2732229409068673,
+        "min_samples_leaf": 29,
+        "n_estimators": 463
+      },
+      "cv_roc_auc_mean": 0.8475779640062596,
+      "cv_roc_auc_sd": 0.0101261415907212
+    },
+    "Gradient Boosting": {
+      "best_params": {
+        "l2_regularization": 0.00998400658032865,
+        "learning_rate": 0.011720087201588045,
+        "max_iter": 287,
+        "max_leaf_nodes": 23,
+        "min_samples_leaf": 24
+      },
+      "cv_roc_auc_mean": 0.8463855464879506,
+      "cv_roc_auc_sd": 0.009575692514616416
+    }
+  },
+  "selected_model": "Random Forest",
+  "test_performance": {
+    "Dummy (majority)": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.2654364797728886,
+      "brier": 0.1949799619120813,
+      "threshold": 0.05,
+      "precision": 0.2654364797728886,
+      "recall": 1.0,
+      "f1": 0.4195176668536175,
+      "flagged_share": 1.0
+    },
+    "Logistic Regression": {
+      "roc_auc": 0.8407812136712393,
+      "pr_auc": 0.627430992809559,
+      "brier": 0.1692216231977538,
+      "threshold": 0.58,
+      "precision": 0.5378486055776892,
+      "recall": 0.7219251336898396,
+      "f1": 0.6164383561643836,
+      "flagged_share": 0.35628105039034774,
+      "roc_auc_ci95": [
+        0.8172296257545807,
+        0.8620022029979172
+      ]
+    },
+    "Random Forest": {
+      "roc_auc": 0.8451497067865354,
+      "pr_auc": 0.6602862182999694,
+      "brier": 0.15952380700314428,
+      "threshold": 0.58,
+      "precision": 0.564755838641189,
+      "recall": 0.7112299465240641,
+      "f1": 0.6295857988165681,
+      "flagged_share": 0.33427963094393187,
+      "roc_auc_ci95": [
+        0.8220982464771667,
+        0.8659478912166917
+      ]
+    },
+    "Gradient Boosting": {
+      "roc_auc": 0.8446033222248057,
+      "pr_auc": 0.6607109584710188,
+      "brier": 0.16111672696959173,
+      "threshold": 0.51,
+      "precision": 0.533457249070632,
+      "recall": 0.767379679144385,
+      "f1": 0.6293859649122807,
+      "flagged_share": 0.38183108587650816,
+      "roc_auc_ci95": [
+        0.8213334197114207,
+        0.8653208635604906
+      ]
+    }
+  },
+  "h1_selected_vs_logistic": {
+    "diff": 0.00436849311529619,
+    "ci95": [
+      -0.0033383882473499217,
+      0.012398928937287699
+    ],
+    "p_one_sided": 0.1265
+  },
+  "top_decile": {
+    "churn_rate": 0.7428571428571429,
+    "lift": 2.7986249045072573
+  },
+  "confusion_matrix": [
+    [
+      830,
+      205
+    ],
+    [
+      108,
+      266
+    ]
+  ],
+  "permutation_importance": [
+    {
+      "feature": "Contract",
+      "mean": 0.08069355102603186,
+      "sd": 0.0071236348081785885
+    },
+    {
+      "feature": "tenure",
+      "mean": 0.024123330491616968,
+      "sd": 0.0028294843191830838
+    },
+    {
+      "feature": "InternetService",
+      "mean": 0.019094611933486643,
+      "sd": 0.004673598007630792
+    },
+    {
+      "feature": "TotalCharges",
+      "mean": 0.013955152548502955,
+      "sd": 0.002131648428471414
+    },
+    {
+      "feature": "OnlineSecurity",
+      "mean": 0.00550535189921381,
+      "sd": 0.0017077392455253084
+    },
+    {
+      "feature": "TechSupport",
+      "mean": 0.0027553454407674613,
+      "sd": 0.001525896095457389
+    },
+    {
+      "feature": "MonthlyCharges",
+      "mean": 0.0018748439208797615,
+      "sd": 0.001977027932895523
+    },
+    {
+      "feature": "PaymentMethod",
+      "mean": 0.0016528455914645616,
+      "sd": 0.0008318395735415542
+    },
+    {
+      "feature": "MultipleLines",
+      "mean": 0.0013257037553713103,
+      "sd": 0.0008573102566234647
+    },
+    {
+      "feature": "StreamingMovies",
+      "mean": 0.0012291715105014736,
+      "sd": 0.0006966527514403948
+    },
+    {
+      "feature": "PaperlessBilling",
+      "mean": 0.0009695419669844441,
+      "sd": 0.0005636672688665371
+    },
+    {
+      "feature": "charge_ratio",
+      "mean": 0.00046164974553725515,
+      "sd": 0.0006417159099630412
+    },
+    {
+      "feature": "SeniorCitizen",
+      "mean": 0.00036692586564710525,
+      "sd": 0.00011932903608802305
+    },
+    {
+      "feature": "PhoneService",
+      "mean": 0.000310866551275768,
+      "sd": 0.00010685184549900959
+    },
+    {
+      "feature": "StreamingTV",
+      "mean": 0.000308885961059883,
+      "sd": 0.0008047919895676005
+    },
+    {
+      "feature": "Dependents",
+      "mean": 0.00015930834345159183,
+      "sd": 0.00016621096081173895
+    },
+    {
+      "feature": "OnlineBackup",
+      "mean": 0.00013028839115800662,
+      "sd": 0.0008296627700696659
+    },
+    {
+      "feature": "gender",
+      "mean": 4.7792503035519e-05,
+      "sd": 0.0003316377930545601
+    },
+    {
+      "feature": "n_addon_services",
+      "mean": 3.952569169961932e-05,
+      "sd": 0.00014526445739755203
+    },
+    {
+      "feature": "Partner",
+      "mean": -1.1452978204877045e-05,
+      "sd": 0.00015102041979309815
+    },
+    {
+      "feature": "DeviceProtection",
+      "mean": -0.0001489748292817487,
+      "sd": 0.0003304051496023316
+    },
+    {
+      "feature": "auto_pay",
+      "mean": -0.0001579305415622271,
+      "sd": 0.00040021346707985706
+    }
+  ],
+  "logistic_odds_ratios": [
+    {
+      "feature": "MonthlyCharges",
+      "odds_ratio": 0.10943381406884847
+    },
+    {
+      "feature": "InternetService = DSL",
+      "odds_ratio": 0.28029565009888346
+    },
+    {
+      "feature": "tenure",
+      "odds_ratio": 0.3012350923818665
+    },
+    {
+      "feature": "Contract = Two year",
+      "odds_ratio": 0.4105406094754558
+    },
+    {
+      "feature": "MultipleLines = No phone service",
+      "odds_ratio": 0.45263846989002127
+    },
+    {
+      "feature": "OnlineSecurity = No internet service",
+      "odds_ratio": 0.5759973479748204
+    },
+    {
+      "feature": "TechSupport = No internet service",
+      "odds_ratio": 0.5759973479748204
+    },
+    {
+      "feature": "InternetService = No",
+      "odds_ratio": 0.5759973479748204
+    },
+    {
+      "feature": "StreamingMovies = No internet service",
+      "odds_ratio": 0.5759973479748204
+    },
+    {
+      "feature": "DeviceProtection = No internet service",
+      "odds_ratio": 0.5759973479748204
+    },
+    {
+      "feature": "StreamingTV = No internet service",
+      "odds_ratio": 0.5759973479748204
+    },
+    {
+      "feature": "Contract = Month-to-month",
+      "odds_ratio": 1.7482790197069389
+    },
+    {
+      "feature": "n_addon_services",
+      "odds_ratio": 1.9799715528502728
+    },
+    {
+      "feature": "InternetService = Fiber optic",
+      "odds_ratio": 3.7531228121513984
+    }
+  ],
+  "assumptions": {
+    "contact_cost": 5.0,
+    "incentive_months": 1.0,
+    "success_rate": 0.3,
+    "retained_months": 12.0
+  },
+  "business": {
+    "profit_threshold": 0.48,
+    "oof_profit_at_threshold": 210669.22999999998,
+    "n_targeted_test": 582,
+    "share_targeted_test": 0.41305890702625975,
+    "churners_reached": 303,
+    "churners_total_test": 374,
+    "random_profit_p95": 12031.390999999996,
+    "strategies_test_profit": {
+      "No campaign": 0.0,
+      "Contact everyone": 19677.87,
+      "Random (same 582 customers)": 8042.139659999998,
+      "Logistic Regression targeting": 49154.729999999996,
+      "Random Forest targeting": 50939.61499999999,
+      "Perfect foresight (upper bound)": 87939.16999999998
+    },
+    "scale_factor_to_full_base": 4.998580553584103
+  },
+  "sensitivity": [
+    {
+      "success_rate": 0.1,
+      "retained_months": 6,
+      "threshold": 0.86,
+      "model_profit": 989.2250000000003,
+      "contact_all_profit": -56523.85
+    },
+    {
+      "success_rate": 0.1,
+      "retained_months": 12,
+      "threshold": 0.69,
+      "model_profit": 7139.860000000001,
+      "contact_all_profit": -40194.91
+    },
+    {
+      "success_rate": 0.1,
+      "retained_months": 18,
+      "threshold": 0.6,
+      "model_profit": 16144.875,
+      "contact_all_profit": -23865.97
+    },
+    {
+      "success_rate": 0.1,
+      "retained_months": 24,
+      "threshold": 0.58,
+      "model_profit": 28064.395000000004,
+      "contact_all_profit": -7537.029999999996
+    },
+    {
+      "success_rate": 0.2,
+      "retained_months": 6,
+      "threshold": 0.69,
+      "model_profit": 5538.100000000001,
+      "contact_all_profit": -42916.399999999994
+    },
+    {
+      "success_rate": 0.2,
+      "retained_months": 12,
+      "threshold": 0.58,
+      "model_profit": 26067.730000000003,
+      "contact_all_profit": -10258.519999999997
+    },
+    {
+      "success_rate": 0.2,
+      "retained_months": 18,
+      "threshold": 0.48,
+      "model_profit": 53183.520000000004,
+      "contact_all_profit": 22399.360000000008
+    },
+    {
+      "success_rate": 0.2,
+      "retained_months": 24,
+      "threshold": 0.4,
+      "model_profit": 80641.16,
+      "contact_all_profit": 55057.240000000005
+    },
+    {
+      "success_rate": 0.3,
+      "retained_months": 6,
+      "threshold": 0.62,
+      "model_profit": 13017.874999999998,
+      "contact_all_profit": -29308.950000000004
+    },
+    {
+      "success_rate": 0.3,
+      "retained_months": 12,
+      "threshold": 0.48,
+      "model_profit": 50939.61499999999,
+      "contact_all_profit": 19677.87
+    },
+    {
+      "success_rate": 0.3,
+      "retained_months": 18,
+      "threshold": 0.33,
+      "model_profit": 92950.025,
+      "contact_all_profit": 68664.69
+    },
+    {
+      "success_rate": 0.3,
+      "retained_months": 24,
+      "threshold": 0.28,
+      "model_profit": 136537.19999999998,
+      "contact_all_profit": 117651.50999999998
+    },
+    {
+      "success_rate": 0.4,
+      "retained_months": 6,
+      "threshold": 0.58,
+      "model_profit": 22074.4,
+      "contact_all_profit": -15701.499999999995
+    },
+    {
+      "success_rate": 0.4,
+      "retained_months": 12,
+      "threshold": 0.4,
+      "model_profit": 75903.49,
+      "contact_all_profit": 49614.26000000001
+    },
+    {
+      "success_rate": 0.4,
+      "retained_months": 18,
+      "threshold": 0.3,
+      "model_profit": 135571.71000000002,
+      "contact_all_profit": 114930.02000000002
+    },
+    {
+      "success_rate": 0.4,
+      "retained_months": 24,
+      "threshold": 0.25,
+      "model_profit": 196562.01,
+      "contact_all_profit": 180245.78000000003
+    },
+    {
+      "success_rate": 0.5,
+      "retained_months": 6,
+      "threshold": 0.58,
+      "model_profit": 32057.725000000006,
+      "contact_all_profit": -2094.05
+    },
+    {
+      "success_rate": 0.5,
+      "retained_months": 12,
+      "threshold": 0.33,
+      "model_profit": 102912.925,
+      "contact_all_profit": 79550.65
+    },
+    {
+      "success_rate": 0.5,
+      "retained_months": 18,
+      "threshold": 0.25,
+      "model_profit": 178464.35,
+      "contact_all_profit": 161195.35
+    },
+    {
+      "success_rate": 0.5,
+      "retained_months": 24,
+      "threshold": 0.17,
+      "model_profit": 255594.77500000002,
+      "contact_all_profit": 242840.05
+    }
+  ],
+  "runtime_seconds": 554.1
+}
